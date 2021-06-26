@@ -1,0 +1,21 @@
+<site-list version="10">
+  <site url="localhost:5001">
+    <compat-mode>Default</compat-mode>
+    <open-in>MSEdge</open-in>
+  </site>
+  <site url="localhost:5001/Edge">
+    <compat-mode>Default</compat-mode>
+    <open-in>MSEdge</open-in>
+  </site>
+  <site url="localhost:5001/IE">
+    <compat-mode>Default</compat-mode>
+    <open-in>IE11</open-in>
+  </site>
+  <site url="localhost:5001/Account">
+    <compat-mode>Default</compat-mode>
+    <open-in>None</open-in>
+  </site>
+
+  <!--<shared-cookie domain="localhost" name="custom-cookie-name"></shared-cookie>-->
+  <shared-cookie host="localhost" name="custom-cookie-name"></shared-cookie>
+</site-list>

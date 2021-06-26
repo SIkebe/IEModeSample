@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Hello @HttpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value!</h1>
+            <p>Username: @HttpContextAccessor.HttpContext.User.Identity.Name</p>
+        </div>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">Cookie sharing from Microsoft Edge to Internet Explorer</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="Edge/WindowOpen" class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Edge/WindowOpen</h5>
+                <p>Edge 側で開きます。認証が必要です。<code>window.open()</code> の挙動をテストするためのページです。</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="IE/WindowOpen" class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">IE/WindowOpen</h5>
+                <p>IE モード側で開きます。認証が必要です。<code>window.open()</code> の挙動をテストするためのページです。</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="Edge/Privacy" class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Edge/Privacy</h5>
+                <p>Edge 側で開きます。認証は不要です。</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="IE/Privacy" class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">IE/Privacy</h5>
+                <p>IE モード側で開きます。認証は不要です。</p>
+            </div>
+        </a>
+    </div>
+</div>
