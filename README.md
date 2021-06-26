@@ -1,5 +1,5 @@
 # IEModeSample
-IEモードの動作確認のために作成したサンプルWebアプリケーションです。
+Microsoft Edge IEモードの動作確認のために作成したサンプルWebアプリケーションです。
 * [流用元](https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/security/authentication/cookie/samples/3.x/CookieSample)
 * [Use cookie authentication without ASP.NET Core Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-6.0)
 * [Cookie sharing from Microsoft Edge to Internet Explorer](https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-add-guidance-cookieshare)
