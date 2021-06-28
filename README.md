@@ -26,7 +26,7 @@ Microsoft Edge IEモードの動作確認のために作成したサンプルWeb
 ## シナリオ
 ### 1. `window.open` の挙動の違い
 
-### 2. Edge -> IEモードのセッションはCookieは共有できるがその逆は不可
+### 2. Edge -> IEモードのセッションCookieは共有できるがその逆は不可
 * Edge -> IEモード (Cookieが共有されている場合)
     ![](shared-cookie-edge-to-ie.gif)
 * Edge -> IEモード (Cookieが共有されていない場合)
