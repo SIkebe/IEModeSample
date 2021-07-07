@@ -20,7 +20,7 @@ namespace CookieSample.Pages.Edge
             _logger = logger;
         }
 
-        private IEnumerable<Customer> Customers { get; set; } = new []
+        private IEnumerable<Customer> Customers { get; set; } = new[]
         {
             new Customer(1, "田中太郎", "東京", "日本"),
             new Customer(2, "山田花子", "熊本", "日本"),
