@@ -8,9 +8,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2.3.4
-    - name: Build and Run E2E Tests On Linux
+    - name: Build and Run E2E Tests
       run: |
-        .\build.ps1 --target Run-E2E-Tests --removeContainers false
+        .\build.ps1 --target Run-E2E-Tests
       shell: pwsh
 
     - name: Upload logs
