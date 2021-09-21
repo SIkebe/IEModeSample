@@ -5,27 +5,26 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace CookieSample.Controllers
+namespace CookieSample.Controllers;
+
+[Route("[controller]/[action]")]
+public class AccountController : Controller
 {
-    [Route("[controller]/[action]")]
-    public class AccountController : Controller
+    private readonly ILogger _logger;
+
+    public AccountController(ILogger<AccountController> logger)
     {
-        private readonly ILogger _logger;
+        _logger = logger;
+    }
 
-        public AccountController(ILogger<AccountController> logger)
-        {
-            _logger = logger;
-        }
+    [HttpPost]
+    public async Task<IActionResult> Logout()
+    {
+        _logger.LogInformation("User {Name} logged out at {Time}.",
+            User.Identity.Name, DateTime.UtcNow);
 
-        [HttpPost]
-        public async Task<IActionResult> Logout()
-        {
-            _logger.LogInformation("User {Name} logged out at {Time}.",
-                User.Identity.Name, DateTime.UtcNow);
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
-            return RedirectToPage("/Account/SignedOut");
-        }
+        return RedirectToPage("/Account/SignedOut");
     }
 }
