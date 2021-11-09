@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
@@ -12,7 +13,14 @@ public class PrivacyModel : PageModel
         _logger = logger;
     }
 
+    public string Name { get; set; }
+
     public void OnGet()
     {
+    }
+
+    public void OnPost([FromForm] string name)
+    {
+        Name = name;
     }
 }

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 
-var count = int.Parse(args[0]) -1;
+var count = int.Parse(args[0]) - 1;
 
 var builder = new StringBuilder();
 for (var i = 0; i < count; i++)
