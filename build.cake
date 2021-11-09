@@ -20,7 +20,7 @@ Task("Build")
     .IsDependentOn("Clean")
     .Does((ctx) =>
 {
-    DotNetCoreBuild("./IEModeSample.sln", new DotNetCoreBuildSettings { Configuration = configuration });
+    DotNetBuild("./IEModeSample.sln", new DotNetBuildSettings { Configuration = configuration });
 });
 
 Task("Launch-Kestrel")
@@ -41,7 +41,7 @@ Task("Run-E2E-Tests")
     .IsDependentOn("Launch-Kestrel")
     .Does((ctx) =>
 {
-    DotNetCoreTest("./src/CookieSample.E2ETests", new DotNetCoreTestSettings { Configuration = configuration, NoBuild = true });
+    DotNetTest("./src/CookieSample.E2ETests", new DotNetTestSettings { Configuration = configuration, NoBuild = true });
 });
 
 //////////////////////////////////////////////////////////////////////
