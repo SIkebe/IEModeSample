@@ -18,4 +18,5 @@
 
   <!--<shared-cookie domain="localhost" name="custom-cookie-name"></shared-cookie>-->
   <shared-cookie host="localhost" name="custom-cookie-name"></shared-cookie>
+  <shared-cookie host="localhost" name="custom-antiforgery-cookie-name"></shared-cookie>
 </site-list>

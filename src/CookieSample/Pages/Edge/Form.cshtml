@@ -1,0 +1,11 @@
+@page
+@model CookieSample.Pages.Edge.EdgeFormModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<p>Enter your name:</p>
+
+<form method="post" asp-page="../IE/Privacy">
+    Name:
+    <input asp-for="Name" />
+    <input type="submit" />
+</form>

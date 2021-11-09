@@ -25,14 +25,20 @@ public class Startup
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
-                    // ".AspNetCore.Cookies" is set by default
-                    options.Cookie.Name = "custom-cookie-name";
+                // ".AspNetCore.Cookies" is set by default
+                options.Cookie.Name = "custom-cookie-name";
 
-                    // Cookie is created as a host only cookie by default unless options.Cookie.Domain is specified.
-                    //options.Cookie.Domain = "localhost";
-                });
+                // Cookie is created as a host only cookie by default unless options.Cookie.Domain is specified.
+                //options.Cookie.Domain = "localhost";
+            });
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+        services.AddAntiforgery(options =>
+        {
+            options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+            options.Cookie.Name = "custom-antiforgery-cookie-name";
+        });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

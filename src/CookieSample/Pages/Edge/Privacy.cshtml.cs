@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CookieSample.Pages.Edge;
 
+[IgnoreAntiforgeryToken]
 public class PrivacyModel : PageModel
 {
     private readonly ILogger<PrivacyModel> _logger;
@@ -17,14 +18,21 @@ public class PrivacyModel : PageModel
         _logger = logger;
     }
 
+    public string Name { get; set; }
+
     private IEnumerable<Customer> Customers { get; set; } = new[]
     {
-            new Customer(1, "田中太郎", "東京", "日本"),
-            new Customer(2, "山田花子", "熊本", "日本"),
-        };
+        new Customer(1, "田中太郎", "東京", "日本"),
+        new Customer(2, "山田花子", "熊本", "日本"),
+    };
 
     public void OnGet()
     {
+    }
+
+    public void OnPost([FromForm] string name)
+    {
+        Name = name;
     }
 
     public IActionResult OnGetDownload()
