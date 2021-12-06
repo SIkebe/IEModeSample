@@ -2,6 +2,9 @@ using System;
 using System.IO;
 using System.Reflection;
 using OpenQA.Selenium;
+using Xunit;
+
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
 
 namespace CookieSample.E2ETests;
 

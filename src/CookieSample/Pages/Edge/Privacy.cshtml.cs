@@ -40,10 +40,10 @@ public class PrivacyModel : PageModel
         var dt = new DataTable("Grid");
         dt.Columns.AddRange(new DataColumn[4]
         {
-                new DataColumn("CustomerId"),
-                new DataColumn("ContactName"),
-                new DataColumn("City"),
-                new DataColumn("Country")
+            new DataColumn("CustomerId"),
+            new DataColumn("ContactName"),
+            new DataColumn("City"),
+            new DataColumn("Country")
         });
 
         foreach (var customer in Customers)
@@ -55,7 +55,7 @@ public class PrivacyModel : PageModel
         wb.Worksheets.Add(dt);
         using var stream = new MemoryStream();
         wb.SaveAs(stream);
-        return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Grid.xlsx");
+        return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "CookieSample.Pages.Edge.PrivacyModel.Grid.xlsx");
     }
 }
 

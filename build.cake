@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 //////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 //////////////////////////////////////////////////////////////////////
@@ -28,7 +30,7 @@ Task("Launch-Kestrel")
     .Does(async (ctx) =>
 {
     // Run dotnet process background
-    var process = new System.Diagnostics.Process();
+    var process = new Process();
     process.StartInfo.FileName = "dotnet";
     process.StartInfo.Arguments = "run";
     process.StartInfo.WorkingDirectory = MakeAbsolute(Directory("./src/CookieSample")).FullPath;

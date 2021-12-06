@@ -45,7 +45,7 @@ public class DownloadFileTest : IClassFixture<ChromeFixture>, IClassFixture<Edge
         fixture.Driver.FindElement(By.LinkText("Download")).Click();
         await Task.Delay(2000);
 
-        var filePath = Path.Combine(fixture.DownloadDir, "Grid.xlsx");
+        var filePath = Path.Combine(fixture.DownloadDir, "CookieSample.Pages.Edge.PrivacyModel.Grid.xlsx");
         var workbook = new XLWorkbook(filePath);
         var worksheet = workbook.Worksheets.Single(s => s.Name == "Grid");
 

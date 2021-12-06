@@ -5,7 +5,7 @@
 <p>Enter your name:</p>
 
 <form method="post" asp-page="../IE/Privacy">
-    Name:
+    <label asp-for="Name">Name:</label>
     <input asp-for="Name" />
-    <input type="submit" />
+    <input type="submit" id="submit" />
 </form>
