@@ -1,4 +1,5 @@
 <site-list version="10">
+  <!-- Development -->
   <site url="localhost:5001">
     <compat-mode>Default</compat-mode>
     <open-in>MSEdge</open-in>
@@ -19,4 +20,26 @@
   <!--<shared-cookie domain="localhost" name="custom-cookie-name"></shared-cookie>-->
   <shared-cookie host="localhost" name="custom-cookie-name"></shared-cookie>
   <shared-cookie host="localhost" name="custom-antiforgery-cookie-name"></shared-cookie>
+
+  <!-- Production -->
+  <site url="ie-mode-sample-webapp.azurewebsites.net">
+    <compat-mode>Default</compat-mode>
+    <open-in>MSEdge</open-in>
+  </site>
+  <site url="ie-mode-sample-webapp.azurewebsites.net/Edge">
+    <compat-mode>Default</compat-mode>
+    <open-in>MSEdge</open-in>
+  </site>
+  <site url="ie-mode-sample-webapp.azurewebsites.net/IE">
+    <compat-mode>Default</compat-mode>
+    <open-in>IE11</open-in>
+  </site>
+  <site url="ie-mode-sample-webapp.azurewebsites.net/Account">
+    <compat-mode>Default</compat-mode>
+    <open-in>None</open-in>
+  </site>
+
+  <!--<shared-cookie domain="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name"></shared-cookie>-->
+  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name"></shared-cookie>
+  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-antiforgery-cookie-name"></shared-cookie>
 </site-list>
