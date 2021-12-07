@@ -4,13 +4,12 @@ on: [push]
 
 jobs:
   eun-e2e-tests:
-    runs-on: windows-2019
+    runs-on: windows-2022
 
     steps:
-    - uses: actions/checkout@v2.4.0
+    - uses: actions/checkout@v2
     - name: Build and Run E2E Tests
-      run: |
-        .\build.ps1 --target Run-E2E-Tests
+      run: .\build.ps1 --target Run-E2E-Tests
       shell: pwsh
 
     - name: Upload logs
