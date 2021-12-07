@@ -11,12 +11,12 @@ Microsoft Edge IEモードの動作確認のために作成したサンプルWeb
 * エンタープライズモードサイトリストの構成。
     * https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-policies#configure-sites-on-the-enterprise-site-list
     * [`sites.xml`](sites.xml)をサイトリストに設定。
-* Webアプリ起動。
+* Webアプリ起動。もしくは https://ie-mode-sample-webapp.azurewebsites.net/ にアクセス。
     ```powershell
     cd .\src\CookieSample\
     dotnet run
     ```
-* Edgeで https://localhost:5001 にアクセス。
+* ローカルで起動した場合、Edgeで https://localhost:5001 にアクセス。
 
 ## テストユーザー
 * ユーザー名: Maria Rodriguez
