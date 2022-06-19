@@ -17,9 +17,10 @@
     <open-in>None</open-in>
   </site>
 
-  <!--<shared-cookie domain="localhost" name="custom-cookie-name"></shared-cookie>-->
-  <shared-cookie host="localhost" name="custom-cookie-name"></shared-cookie>
-  <shared-cookie host="localhost" name="custom-antiforgery-cookie-name"></shared-cookie>
+  <!-- MSEdge, IE11, Both -->
+  <!--<shared-cookie domain="localhost" name="custom-cookie-name" source-engine="Both"></shared-cookie>-->
+  <shared-cookie host="localhost" name="custom-cookie-name" source-engine="Both"></shared-cookie>
+  <shared-cookie host="localhost" name="custom-antiforgery-cookie-name" source-engine="Both"></shared-cookie>
 
   <!-- Production -->
   <site url="ie-mode-sample-webapp.azurewebsites.net">
@@ -39,7 +40,8 @@
     <open-in>None</open-in>
   </site>
 
-  <!--<shared-cookie domain="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name"></shared-cookie>-->
-  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name"></shared-cookie>
-  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-antiforgery-cookie-name"></shared-cookie>
+  <!-- MSEdge, IE11, Both -->
+  <!--<shared-cookie domain="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name" source-engine="Both"></shared-cookie>-->
+  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-cookie-name" source-engine="Both"></shared-cookie>
+  <shared-cookie host="ie-mode-sample-webapp.azurewebsites.net" name="custom-antiforgery-cookie-name" source-engine="Both"></shared-cookie>
 </site-list>
