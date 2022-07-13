@@ -20,6 +20,9 @@ indent_size = 2
 [*.{xml,csproj,config}]
 indent_size = 2
 
+[*.bicep]
+indent_size = 2
+
 [*.cs]
 dotnet_naming_rule.private_members_with_underscore.symbols  = private_fields
 dotnet_naming_rule.private_members_with_underscore.style    = prefix_underscore
