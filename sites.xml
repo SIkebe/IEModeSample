@@ -22,6 +22,21 @@
   <shared-cookie host="localhost" name="custom-cookie-name" source-engine="Both"></shared-cookie>
   <shared-cookie host="localhost" name="custom-antiforgery-cookie-name" source-engine="Both"></shared-cookie>
 
+  <!-- CookieSso -->
+  <site url="app1.company.local">
+    <compat-mode>Default</compat-mode>
+    <open-in>MSEdge</open-in>
+  </site>
+  <site url="app2.company.local">
+    <compat-mode>Default</compat-mode>
+    <open-in>IE11</open-in>
+  </site>
+  <site url="identity.company.local">
+    <compat-mode>Default</compat-mode>
+    <open-in>IE11</open-in>
+  </site>
+  <shared-cookie domain=".company.local" name="CookieSso.Identity" source-engine="Both"></shared-cookie>
+
   <!-- Production -->
   <site url="ie-mode-sample-webapp.azurewebsites.net">
     <compat-mode>Default</compat-mode>
