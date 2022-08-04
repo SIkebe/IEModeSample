@@ -14,7 +14,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '7.0.x'
+        include-prerelease: true
+
     - uses: browser-actions/setup-chrome@latest
+
     - name: Build and Run E2E Tests
       run: .\build.ps1 --target Run-E2E-Tests
       shell: pwsh
