@@ -5,6 +5,8 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - main
+env:
+  WD_CHROME_PATH: C:\hostedtoolcache\windows\chromium\latest\x64\chrome.exe
 
 jobs:
   eun-e2e-tests:
