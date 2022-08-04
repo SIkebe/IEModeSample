@@ -9,10 +9,7 @@ public class ChromeFixture : BrowserFixture
 {
     protected override IWebDriver CreateDriver()
     {
-        var opts = new ChromeOptions
-        {
-            BinaryLocation = @"C:\hostedtoolcache\windows\chromium\latest\x64\chrome.exe"
-        };
+        var opts = new ChromeOptions();
 
         // Ignore self-signed certificate warnings
         opts.AddArgument("--ignore-certificate-errors");
