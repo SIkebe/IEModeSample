@@ -9,7 +9,7 @@
     <PackageReference Include="ClosedXML" Version="0.97.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="Selenium.WebDriver" Version="4.5.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="106.0.5249.6100" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="107.0.5304.6200" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="106.0.1370.34" Condition=" '$(OS)' == 'Windows_NT' " />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
