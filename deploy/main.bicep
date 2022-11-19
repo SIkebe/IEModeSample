@@ -50,7 +50,7 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
   resource appServiceWebConfig 'config' = {
     name: 'web'
     properties: {
-      netFrameworkVersion: 'v6.0'
+      netFrameworkVersion: 'v7.0'
     }
     dependsOn: [
       appServiceMetadataConfig
