@@ -1,7 +1,7 @@
 # Deployment Azure infrastructure
 
 ## Prerequisites
-* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+* [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 * Visual Studio Code
     * [Bicep](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
 

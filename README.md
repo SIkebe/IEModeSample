@@ -1,15 +1,15 @@
 # IEModeSample
 Microsoft Edge IEモードの動作確認のために作成したサンプルWebアプリケーションです。
 * [流用元](https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/security/authentication/cookie/samples/3.x/CookieSample)
-* [Use cookie authentication without ASP.NET Core Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-6.0)
-* [Cookie sharing from Microsoft Edge to Internet Explorer](https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-add-guidance-cookieshare)
+* [Use cookie authentication without ASP.NET Core Identity](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-7.0)
+* [Cookie sharing from Microsoft Edge to Internet Explorer](https://learn.microsoft.com/en-us/deployedge/edge-ie-mode-add-guidance-cookieshare)
 
 ## Prerequisite
 * .NET 7.0
 
 ## Getting Started
 * エンタープライズモードサイトリストの構成。
-    * https://docs.microsoft.com/en-us/deployedge/edge-ie-mode-policies#configure-sites-on-the-enterprise-site-list
+    * https://learn.microsoft.com/en-us/deployedge/edge-ie-mode-policies#configure-sites-on-the-enterprise-site-list
     * [`sites.xml`](sites.xml)をサイトリストに設定。
 * Webアプリ起動。もしくは https://ie-mode-sample-webapp.azurewebsites.net/ にアクセス。
     ```powershell
