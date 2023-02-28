@@ -22,7 +22,7 @@ public class ChromeFixture : BrowserFixture
         // Comment this out if you want to watch or interact with the browser (e.g. for debugging)
         if (!Debugger.IsAttached)
         {
-            opts.AddArgument("--headless");
+            opts.AddArgument("--headless=new");
 
             // ヘッドレスの規定値は800 x 600。リサイズ不可でログインボタン等が押せないので初期値を指定。
             opts.AddArgument("--window-size=1920,1080");
