@@ -16,7 +16,8 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v3
       with:
-        global-json-file: global.json
+        #global-json-file: global.json
+        dotnet-version: 8.0.100-preview.1.23115.2
 
     - name: Build and Run E2E Tests
       run: .\build.ps1 --target Run-E2E-Tests
