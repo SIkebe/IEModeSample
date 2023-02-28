@@ -5,7 +5,7 @@ Microsoft Edge IEモードの動作確認のために作成したサンプルWeb
 * [Cookie sharing from Microsoft Edge to Internet Explorer](https://learn.microsoft.com/en-us/deployedge/edge-ie-mode-add-guidance-cookieshare)
 
 ## Prerequisite
-* .NET 7.0
+* .NET 8.0
 
 ## Getting Started
 * エンタープライズモードサイトリストの構成。
