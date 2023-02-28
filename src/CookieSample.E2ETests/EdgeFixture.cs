@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
 
@@ -24,6 +25,10 @@ public class EdgeFixture : BrowserFixture
         {
             opts.AddArgument("--headless=new");
         }
+
+        var downloadDir = Path.Combine(TestDllDir, "download", "edge");
+        Directory.CreateDirectory(downloadDir);
+        DownloadDir = downloadDir;
 
         opts.AddUserProfilePreference("download.default_directory", DownloadDir);
         opts.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);

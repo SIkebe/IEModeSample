@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using OpenQA.Selenium;
+using Xunit.Abstractions;
 
 namespace CookieSample.E2ETests;
 
@@ -13,10 +14,6 @@ public abstract class BrowserFixture : IDisposable
     {
         // Ensure driver can start under proxy environment
         Environment.SetEnvironmentVariable("no_proxy", "localhost");
-
-        var downloadDir = Path.Combine(TestDllDir, "download");
-        Directory.CreateDirectory(downloadDir);
-        DownloadDir = downloadDir;
 
         var logDir = Path.Combine(TestDllDir, "logs");
         Directory.CreateDirectory(logDir);
