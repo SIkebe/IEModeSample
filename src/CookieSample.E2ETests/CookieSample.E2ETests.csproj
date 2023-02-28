@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -9,8 +9,8 @@
     <PackageReference Include="ClosedXML" Version="0.100.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.8.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="109.0.5414.7400" />
-    <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="109.0.1518.61" Condition=" '$(OS)' == 'Windows_NT' " />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="110.0.5481.7700" />
+    <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="110.0.1587.50" Condition=" '$(OS)' == 'Windows_NT' " />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,6 +20,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
