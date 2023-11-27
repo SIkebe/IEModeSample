@@ -53,7 +53,7 @@ public abstract class BrowserFixture : IDisposable
                 // For trouble shooting purpose
                 var screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
                 var file = Path.Combine(LogDir, $"{DateTime.Now:yyyyMMddss}.png");
-                screenshot.SaveAsFile(file, ScreenshotImageFormat.Png);
+                screenshot.SaveAsFile(file);
             }
             catch
             {
