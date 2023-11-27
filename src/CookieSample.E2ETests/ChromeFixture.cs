@@ -34,9 +34,8 @@ public class ChromeFixture : BrowserFixture
         DownloadDir = downloadDir;
 
         opts.AddUserProfilePreference("download.default_directory", DownloadDir);
-        opts.AddUserProfilePreference("download.prompt_for_download", "False");
-        opts.AddUserProfilePreference("download.directory_upgrade", "True");
         opts.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
+        opts.AddArguments("disable-features=DownloadBubble,DownloadBubbleV2");
 
         var driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), opts, TimeSpan.FromSeconds(60));
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
