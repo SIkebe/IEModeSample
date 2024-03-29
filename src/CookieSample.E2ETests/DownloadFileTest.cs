@@ -26,7 +26,8 @@ public class DownloadFileTest : IClassFixture<ChromeFixture>, IClassFixture<Edge
 
     public static IEnumerable<object[]> AllBrowsers()
     {
-        yield return new[] { nameof(ChromeFixture) };
+        // https://github.com/SIkebe/IEModeSample/pull/217
+        // yield return new[] { nameof(ChromeFixture) };
         yield return new[] { nameof(EdgeFixture) };
     }
 
