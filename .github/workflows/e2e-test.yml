@@ -19,11 +19,11 @@ jobs:
         global-json-file: global.json
 
     - name: Build solution
-      run: dotnet build -c Release
+      run: dotnet build
 
     - name: Run the web app and E2E tests
       run: |
-        dotnet run --project src/CookieSample/CookieSample.csproj --no-build
+        dotnet run --project src/CookieSample/CookieSample.csproj --no-build &
         sleep 3
         dotnet test src/CookieSample.E2ETests/CookieSample.E2ETests.csproj
 
