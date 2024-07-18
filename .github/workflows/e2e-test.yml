@@ -34,4 +34,4 @@ jobs:
       if: failure()
       with:
         name: logs
-        path: src/CookieSample.E2ETests/bin/Debug/net9.0/logs
+        path: src/CookieSample.E2ETests/bin/Release/net9.0/logs
