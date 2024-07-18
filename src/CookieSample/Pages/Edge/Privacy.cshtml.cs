@@ -4,27 +4,19 @@ using System.IO;
 using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 namespace CookieSample.Pages.Edge;
 
 [IgnoreAntiforgeryToken]
-public class PrivacyModel : PageModel
+public class PrivacyModel() : PageModel
 {
-    private readonly ILogger<PrivacyModel> _logger;
-
-    public PrivacyModel(ILogger<PrivacyModel> logger)
-    {
-        _logger = logger;
-    }
-
     public string Name { get; set; }
 
-    private IEnumerable<Customer> Customers { get; set; } = new[]
-    {
+    private IEnumerable<Customer> Customers { get; set; } =
+    [
         new Customer(1, "田中太郎", "東京", "日本"),
         new Customer(2, "山田花子", "熊本", "日本"),
-    };
+    ];
 
     public void OnGet()
     {
@@ -38,13 +30,13 @@ public class PrivacyModel : PageModel
     public IActionResult OnGetDownload()
     {
         var dt = new DataTable("Grid");
-        dt.Columns.AddRange(new DataColumn[4]
-        {
-                new DataColumn("CustomerId"),
-                new DataColumn("ContactName"),
-                new DataColumn("City"),
-                new DataColumn("Country")
-        });
+        dt.Columns.AddRange(
+        [
+            new DataColumn("CustomerId"),
+            new DataColumn("ContactName"),
+            new DataColumn("City"),
+            new DataColumn("Country")
+        ]);
 
         foreach (var customer in Customers)
         {

@@ -28,7 +28,7 @@ public abstract class BrowserFixture : IDisposable
     }
 
     public IWebDriver Driver { get; set; }
-    public string TestDllDir => Path.GetDirectoryName(Assembly.GetAssembly(typeof(BrowserFixture))!.Location)!;
+    public static string TestDllDir => Path.GetDirectoryName(Assembly.GetAssembly(typeof(BrowserFixture))!.Location)!;
     public string DownloadDir { get; set; }
     public string LogDir { get; set; }
 
