@@ -19,7 +19,9 @@ jobs:
         global-json-file: global.json
 
     - name: Run web app
-      run: dotnet run --project src/CookieSample/CookieSample.csproj &
+      run: |
+        dotnet run --project src/CookieSample/CookieSample.csproj &
+        sleep 3
 
     - name: Run E2E Tests
       run: dotnet test src/CookieSample.E2ETests/CookieSample.E2ETests.csproj
