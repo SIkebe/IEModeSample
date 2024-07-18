@@ -7,22 +7,13 @@ using ClosedXML.Excel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace CookieSample.E2ETests;
 
-public class DownloadFileTest : IClassFixture<ChromeFixture>, IClassFixture<EdgeFixture>
+public class DownloadFileTest(ChromeFixture chromeFixture, EdgeFixture edgeFixture) : IClassFixture<ChromeFixture>, IClassFixture<EdgeFixture>
 {
-    private readonly BrowserFixture _chromeFixture;
-    private readonly BrowserFixture _edgeFixture;
-    private readonly ITestOutputHelper _helper;
-
-    public DownloadFileTest(ChromeFixture chromeFixture, EdgeFixture edgeFixture, ITestOutputHelper helper)
-    {
-        _chromeFixture = chromeFixture;
-        _edgeFixture = edgeFixture;
-        _helper = helper;
-    }
+    private readonly BrowserFixture _chromeFixture = chromeFixture;
+    private readonly BrowserFixture _edgeFixture = edgeFixture;
 
     public static IEnumerable<object[]> AllBrowsers()
     {

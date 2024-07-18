@@ -13,14 +13,9 @@ using System.Collections.Generic;
 
 namespace CookieSample.Pages.Account;
 
-public class LoginModel : PageModel
+public class LoginModel(ILogger<LoginModel> logger) : PageModel
 {
-    private readonly ILogger<LoginModel> _logger;
-
-    public LoginModel(ILogger<LoginModel> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger<LoginModel> _logger = logger;
 
     [BindProperty]
     public InputModel Input { get; set; }
@@ -77,7 +72,7 @@ public class LoginModel : PageModel
             // on the email address maria.rodriguez@contoso.com with 
             // any password that passes model validation.
 
-            var user = await AuthenticateUser(Input.Email, Input.Password);
+            var user = await AuthenticateUser(Input.Email);
 
             if (user == null)
             {
@@ -86,11 +81,11 @@ public class LoginModel : PageModel
             }
 
             var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim("FullName", user.FullName),
-                    new Claim(ClaimTypes.Role, "Administrator"),
-                };
+            {
+                new(ClaimTypes.Name, user.Email),
+                new("FullName", user.FullName),
+                new(ClaimTypes.Role, "Administrator"),
+            };
 
             var claimsIdentity = new ClaimsIdentity(
                 claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -134,7 +129,7 @@ public class LoginModel : PageModel
         return Page();
     }
 
-    private static async Task<ApplicationUser> AuthenticateUser(string email, string password)
+    private static async Task<ApplicationUser> AuthenticateUser(string email)
     {
         // For demonstration purposes, authenticate a user
         // with a static email address. Ignore the password.
