@@ -1,0 +1,5 @@
+# Code owners for Dependabot PRs and other repository changes
+# This file replaces the deprecated 'reviewers' field in dependabot.yml
+# See: https://github.blog/changelog/2025-04-29-dependabot-reviewers-configuration-option-being-replaced-by-code-owners/
+
+* @SIkebe
