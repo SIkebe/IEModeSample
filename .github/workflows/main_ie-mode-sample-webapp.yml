@@ -28,7 +28,7 @@ jobs:
         run: dotnet publish src/CookieSample -c Release -o myapp --self-contained true --runtime win-x86
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: .net-app
           path: myapp

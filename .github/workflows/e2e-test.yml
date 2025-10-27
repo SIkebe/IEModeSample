@@ -28,7 +28,7 @@ jobs:
         dotnet test src/CookieSample.E2ETests/CookieSample.E2ETests.csproj
 
     - name: Upload logs
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: failure()
       with:
         name: logs
