@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.5.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.6.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.44.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="148.0.7778.17800" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="126.0.2592.102" Condition=" '$(OS)' == 'Windows_NT' " />
